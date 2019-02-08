@@ -1,40 +1,28 @@
 # Kaggle TMDB Box Office Prediction
 
-This is a repository for challenging the Kaggle competition.
+Kaggle TMDB Box Office PredictionのKernelを共有するためのレポジトリです。
 
-Related links:
+Kaggle TMDB Box Office Prediction: https://www.kaggle.com/c/tmdb-box-office-prediction
 
-https://www.kaggle.com/c/tmdb-box-office-prediction
-
-https://www.themoviedb.org/
+TMDB Web Site: https://www.themoviedb.org/
 
 # Overview
 
 ## Description
 
-We're going to make you an offer you can't refuse: a Kaggle competition!
-
-In a world... where movies made an estimated $41.7 billion in 2018, the film industry is more popular than ever. But what movies make the most money at the box office? How much does a director matter? Or the budget? For some movies, it's "You had me at 'Hello.'" For others, the trailer falls short of expectations and you think "What we have here is a failure to communicate."
-
-In this competition, you're presented with metadata on over 7,000 past films from The Movie Database to try and predict their overall worldwide box office revenue. Data points provided include cast, crew, plot keywords, budget, posters, release dates, languages, production companies, and countries. You can collect other publicly available data to use in your model predictions, but in the spirit of this competition, use only data that would have been available before a movie's release.
-
-Join in, "make our day", and then "you've got to ask yourself one question: 'Do I feel lucky?'"
+このコンペティションでは、The Movie Databaseからの7,000本を超える過去の映画のメタデータをもとに、世界中の興行収入全体の試算を行います。提供されるデータには、キャスト、クルー、キーワードのプロット、予算、ポスター、リリース日、言語、制作会社、および国が含まれます。モデル予測に使用するために他の公に利用可能なデータを収集することもできますが、このコンペでは、映画の公開前に利用可能だったデータのみを使用することにします。
 
 ## Evaluation
 
-It is your job to predict the international box office revenue for each movie. For each id in the test set, you must predict the value of the revenue variable. 
+各映画の国際興行収入を予測します。テストセット内のIDごとに、収益の値を予測する必要があります。
+最終的な提出物は、予測値と実際の収入の間の二乗平均平方根誤差（RMSLE）で評価されます。
 
 ## Timeline
 
-The competition will conclude May 30, 2019 at 11:59 PM UTC.
+2019年5月30日23時59分まで
 
 ## Data Description
 
-In this dataset, you are provided with 7398 movies and a variety of metadata obtained from The Movie Database (TMDB). Movies are labeled with id. Data points include cast, crew, plot keywords, budget, posters, release dates, languages, production companies, and countries.
+このデータセットでは、7398本の映画のデータとThe Movie Database（TMDB）から入手したさまざまなメタデータが提供されています。
 
-You are predicting the worldwide revenue for 4398 movies in the test file.
-
-Note - many movies are remade over the years, therefore it may seem like multiple instance of a movie may appear in the data, however they are different and should be considered separate movies. In addition, some movies may share a title, but be entirely unrelated.
-
-E.g. The Karate Kid (id: 5266) was released in 1986, while a clearly (or maybe just subjectively) inferior remake (id: 1987) was released in 2010. Also, while the Frozen (id: 5295) released by Disney in 2013 may be the household name, don't forget about the less-popular Frozen (id: 139) released three years earlier about skiers who are stranded on a chairlift...
-
+（注）多くの映画は何年にもわたって作り直されているため、データ内に同様の映画が複数表示されているように思うかもしれませんが、それらは別々の映画と見なすべきです。さらに、一部の映画では同じようなタイトルがつけられているものがありますが、それらがまったく無関係であることもあります。
